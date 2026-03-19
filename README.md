@@ -1,49 +1,39 @@
-# Anushka Nilangekar - Portfolio Website
+# Anushka's Amethyst — Portfolio
 
-A modern, responsive portfolio website built with React, Vite, and Tailwind CSS.
+Personal portfolio website!
 
-## Technologies Used
+## Stack
 
-- **React** - Frontend library for building user interfaces
-- **Vite** - Next generation frontend tooling
-- **Tailwind CSS** - Utility-first CSS framework
-- **ESLint** - Code quality tool
+- **React + Vite** — framework and dev tooling
+- **Tailwind CSS** — styling
+- **Framer Motion** — animations and scroll transitions
+- **tsparticles** — particle background (falling crystals/sparkles)
+- **Lenis** — smooth scroll
+- **Howler.js** — background music
+- **ESLint** — code quality
 
-## 🛠️ Setup and Installation
+## Sections
 
-1. Clone the repository:
-   ```bash
-   git clone https://github.com/AnushkaNilangekar/AnushkaNilangekar.github.io.git
-   cd AnushkaNilangekar.github.io/frontend
-   ```
+Splash → Hero → About → Experience → Projects → Skills → Contact
 
-2. Install dependencies:
-   ```bash
-   npm install
-   ```
+## Dev
 
-3. Start the development server:
-   ```bash
-   npm run dev
-   ```
-
-4. Build for production:
-   ```bash
-   npm run build
-   ```
-
-5. Preview production build:
-   ```bash
-   npm run preview
-   ```
-
-## Code Quality
-
-The project uses ESLint for code quality. Run the linter with:
 ```bash
-npm run lint
+npm install
+npm run dev       # localhost:3000
+npm run build     # production build → dist/
+npm run preview   # preview production build
+npm run lint      # lint
 ```
 
-## 📄 License
+## Content
 
-This project is under the [MIT License](LICENSE).
+All personal content (bio, projects, experience, skills, links) lives in one file:
+
+```
+src/data/content.js
+```
+
+## Deployment
+
+Deployed via Vercel — auto-deploys from the `main` branch.

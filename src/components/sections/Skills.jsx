@@ -1,62 +1,74 @@
 import React from 'react';
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faCode, faLock, faCog, faDesktop, faLink, faGem } from '@fortawesome/free-solid-svg-icons';
+import { motion } from 'framer-motion';
+import { CONTENT } from '../../data/content';
 
 const Skills = () => {
-  const skills = [
-    {
-      icon: faCode,
-      title: 'Web Development',
-      description: 'Proficient in modern web technologies including React, Node.js, and various frontend frameworks.'
-    },
-    {
-      icon: faLock,
-      title: 'Security',
-      description: 'Understanding of web security principles and best practices for secure application development.'
-    },
-    {
-      icon: faCog,
-      title: 'Backend Development',
-      description: 'Experience with server-side programming, API development, and database management.'
-    },
-    {
-      icon: faDesktop,
-      title: 'UI/UX Design',
-      description: 'Creating intuitive and responsive user interfaces with modern design principles.'
-    },
-    {
-      icon: faLink,
-      title: 'API Integration',
-      description: 'Skilled in integrating third-party APIs and creating RESTful services.'
-    },
-    {
-      icon: faGem,
-      title: 'Clean Code',
-      description: 'Focus on writing maintainable, efficient, and well-documented code.'
-    }
-  ];
+  const { skills } = CONTENT;
 
   return (
-    <section id="skills" className="section-wrapper bg-gradient-to-br from-secondary to-primary">
-      <div className="max-w-6xl mx-auto">
-        <h2 className="text-4xl font-bold mb-8 text-center">What I do</h2>
-        <p className="text-center mb-16 max-w-3xl mx-auto">
-          Passionate about creating efficient, scalable, and user-friendly applications
-          using cutting-edge technologies.
-        </p>
+    <section id="skills" className="relative">
+      <div className="divider" />
+      <div className="section">
+        <motion.div
+          initial={{ opacity: 0, y: 24 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.7 }}
+          className="mb-14"
+        >
+          <p
+            className="text-xs tracking-[0.4em] uppercase mb-3"
+            style={{ color: 'rgba(245,158,11,0.55)' }}
+          >
+            Skills
+          </p>
+          <h2
+            className="font-display font-bold text-gradient"
+            style={{ fontSize: 'clamp(2rem, 5vw, 3.2rem)' }}
+          >
+            What I work with
+          </h2>
+        </motion.div>
 
-        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-          {skills.map((skill, index) => (
-            <div
-              key={index}
-              className="p-6 bg-white/5 rounded-lg backdrop-blur-sm hover:bg-white/10 transition-colors duration-300"
+        <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-5">
+          {Object.entries(skills).map(([category, items], i) => (
+            <motion.div
+              key={category}
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.5, delay: i * 0.07 }}
+              className="glass rounded-xl p-5 hover-glow transition-all duration-300"
+              whileHover={{ y: -3 }}
             >
-              <div className="icon-wrapper mb-4 mx-auto">
-                <FontAwesomeIcon icon={skill.icon} className="text-xl" />
+              <h3
+                className="text-[10px] tracking-[0.3em] uppercase font-medium mb-4"
+                style={{ color: 'rgba(245,158,11,0.6)' }}
+              >
+                {category}
+              </h3>
+              <div className="flex flex-wrap gap-2">
+                {items.map((skill, j) => (
+                  <motion.span
+                    key={j}
+                    className="px-3 py-1 rounded-full text-xs cursor-default"
+                    style={{
+                      background: 'rgba(255,255,255,0.03)',
+                      border: '1px solid rgba(192,132,252,0.14)',
+                      color: 'rgba(221,214,254,0.6)',
+                    }}
+                    whileHover={{
+                      borderColor: 'rgba(192,132,252,0.4)',
+                      color: '#ddd6fe',
+                      scale: 1.04,
+                    }}
+                    transition={{ duration: 0.15 }}
+                  >
+                    {skill}
+                  </motion.span>
+                ))}
               </div>
-              <h3 className="text-xl font-semibold mb-4 text-center">{skill.title}</h3>
-              <p className="text-center text-gray-300">{skill.description}</p>
-            </div>
+            </motion.div>
           ))}
         </div>
       </div>
@@ -64,4 +76,4 @@ const Skills = () => {
   );
 };
 
-export default Skills; 
+export default Skills;

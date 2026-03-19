@@ -1,38 +1,54 @@
 /** @type {import('tailwindcss').Config} */
 module.exports = {
-  content: [
-    "./src/**/*.{js,jsx,ts,tsx}",
-  ],
+  content: ["./src/**/*.{js,jsx,ts,tsx}"],
   theme: {
     extend: {
       colors: {
-        primary: '#312450',
-        secondary: '#5e42a6',
-        accent: '#b74e91',
-        background: '#312450',
-        foreground: '#ffffff',
+        cave: {
+          deep: "#0A0514",
+          mid: "#110820",
+          surface: "#1A1030",
+        },
+        amethyst: {
+          deep: "#4C1D95",
+          DEFAULT: "#7C3AED",
+          bright: "#A855F7",
+          light: "#C084FC",
+          pale: "#DDD6FE",
+        },
+        gold: {
+          DEFAULT: "#F59E0B",
+          light: "#FDE68A",
+          dim: "#D97706",
+        },
+        teal: {
+          magic: "#14B8A6",
+        },
       },
       fontFamily: {
-        sans: ['Source Sans Pro', 'sans-serif'],
-      },
-      spacing: {
-        '128': '32rem',
+        display: ["Playfair Display", "Georgia", "serif"],
+        sans: ["Inter", "system-ui", "sans-serif"],
       },
       animation: {
-        'fade-in': 'fadeIn 0.5s ease-in-out',
-        'slide-in': 'slideIn 0.5s ease-in-out',
+        float: "float 6s ease-in-out infinite",
+        shimmer: "shimmer 3s linear infinite",
+        twinkle: "twinkle 3s ease-in-out infinite",
       },
       keyframes: {
-        fadeIn: {
-          '0%': { opacity: '0' },
-          '100%': { opacity: '1' },
+        float: {
+          "0%, 100%": { transform: "translateY(0px)" },
+          "50%": { transform: "translateY(-12px)" },
         },
-        slideIn: {
-          '0%': { transform: 'translateY(20px)', opacity: '0' },
-          '100%': { transform: 'translateY(0)', opacity: '1' },
+        shimmer: {
+          "0%": { backgroundPosition: "-200% center" },
+          "100%": { backgroundPosition: "200% center" },
+        },
+        twinkle: {
+          "0%, 100%": { opacity: "0.2" },
+          "50%": { opacity: "1" },
         },
       },
     },
   },
   plugins: [],
-} 
+};
