@@ -80,20 +80,11 @@ const About = () => {
               }}
             >
               <img
-                src="/assets/Grad 1.jpg"
+                src="/assets/Grad.jpg"
                 alt="Anushka Nilangekar"
                 className="w-full h-full object-cover"
               />
             </div>
-            {/* Floating badge */}
-            <motion.div
-              className="absolute -bottom-3 -right-3 w-16 h-16 glass rounded-xl flex items-center justify-center text-2xl"
-              style={{ border: '1px solid rgba(245,158,11,0.2)' }}
-              animate={{ y: [0, -6, 0] }}
-              transition={{ duration: 4, repeat: Infinity, ease: 'easeInOut' }}
-            >
-              💻
-            </motion.div>
           </motion.div>
         </div>
 

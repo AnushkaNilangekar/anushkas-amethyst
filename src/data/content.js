@@ -57,55 +57,99 @@ export const CONTENT = {
     "Ice in drinks is a scam.",
   ],
 
-  // TODO:
   experience: [
     {
-      company: "// TODO: Company name",
-      role: "// TODO: Role title",
-      period: "// TODO: Month Year – Month Year",
+      company: "PolicyEngine",
+      role: "Software Engineer",
+      period: "Jul 2025 – Present",
       bullets: [
-        "// TODO: ",
-        "// TODO: ",
+        "Contributing to open-source Python API platform, migrating legacy Flask endpoints to a modernized architecture for improved scalability and response times.",
+        "Built reusable React + TypeScript components for v2 of the web app, reducing UI development time and ensuring design consistency.",
+      ],
+    },
+    {
+      company: "Indiana Farm Bureau Insurance",
+      role: "Software Development Intern",
+      period: "May 2024 – Aug 2024",
+      bullets: [
+        "Built a Java/Spring Boot REST API integrating Jira and Dynatrace to automate log identification for error tickets — boosted support engineer productivity by 20%.",
+        "Resolved backend errors in insurance policy management software, reducing system-detected issues by 6%.",
+      ],
+    },
+    {
+      company: "Sports.Excitement LLC",
+      role: "Software Engineering Intern",
+      period: "Jul 2023 – Aug 2023",
+      bullets: [
+        "Developed responsive React components for ‘Velosaty’, a job search platform for retired athletes, translating Figma designs into production UI.",
+        "Collaborated with cross-functional teams in an Agile environment using Jira for sprint planning and delivery.",
+      ],
+    },
+    {
+      company: "Nuvve Corp — The Data Mine, Purdue University",
+      role: "Undergraduate Research Assistant",
+      period: "Aug 2022 – May 2023",
+      bullets: [
+        "Built an ML energy price prediction system in Python, training RNN, DNN, and LSTM models — identified LSTM as optimal with an 8% MSE reduction over alternatives.",
+        "Conducted hyperparameter tuning research to further optimize model accuracy and minimize forecasting error.",
       ],
     },
   ],
 
-  // TODO:
   projects: [
     {
-      title: "// TODO: Project name",
+      title: "NewsInsight",
       description:
-        "// TODO:",
-      tech: ["React", "Node.js", "// TODO"],
-      github: "#",
+        "LLM-powered Q&A tool that uses Retrieval-Augmented Generation with FAISS and Hugging Face to extract insights from news articles via semantic search.",
+      tech: ["Python", "FastAPI", "React", "TypeScript", "LangChain", "Hugging Face", "FAISS"],
+      github: "https://github.com/AnushkaNilangekar/NewsInsight",
       live: null,
-      image: "/assets/pic01.jpg",
+      image: "/assets/NewsInsight.jpeg",
     },
     {
-      title: "// TODO: Project name",
-      description: "// TODO: Short description.",
-      tech: ["Python", "// TODO"],
-      github: "#",
+      title: "ResHub",
+      description:
+        "Cross-platform roommate-matching app for Purdue students with a React Native frontend, Java Spring Boot backend, AWS infrastructure, and FAISS-powered personalized discovery.",
+      tech: ["Java", "Spring Boot", "React Native", "FAISS", "AWS", "Botpress"],
+      github: "https://github.com/AnushkaNilangekar/resHub",
       live: null,
-      image: "/assets/pic02.jpg",
+      image: "/assets/resHub.jpeg",
     },
     {
-      title: "// TODO: Project name",
-      description: "// TODO: Short description.",
-      tech: ["// TODO"],
+      title: "Botaniq",
+      description:
+        "Android gardening app built with Kotlin and MVVM that helps users discover plants and access species info and care guides via real-time API integration.",
+      tech: ["Kotlin", "Android Studio", "MVVM"],
+      github: "https://github.com/AnushkaNilangekar/Botaniq",
+      live: null,
+      image: "/assets/Botaniq.png",
+    },
+    {
+      title: "Moonships Game",
+      description:
+        "2D desktop food delivery game built with Java LibGDX — shipped 60 features across 6 levels including customizations, boosts, and Purdue-themed elements.",
+      tech: ["Java", "LibGDX", "Agile"],
+      github: "https://github.com/AnushkaNilangekar/moonships",
+      live: null,
+      image: "/assets/Moonships.jpeg",
+    },
+    {
+      title: "Shell Interpreter",
+      description:
+        "Unix-style shell in C/C++ supporting piping, I/O redirection, job control, signal handling, and wildcard expansion.",
+      tech: ["C", "C++"],
       github: "#",
       live: null,
-      image: "/assets/pic03.jpg",
+      image: "/assets/shell.png",
     },
   ],
 
-  // TODO:
   skills: {
-    Languages: ["Python", "JavaScript", "TypeScript", "Java", "C", "Kotlin", "SQL"],
-    Frontend: ["React", "React Native", "Tailwind CSS", "HTML/CSS"],
-    Backend: ["Node.js", "Express", "FastAPI", "REST"],
-    "Cloud & DevOps": ["AWS", "Docker", "Kubernetes", "CI/CD"],
-    "AI / ML": ["TensorFlow", "PyTorch", "scikit-learn", "LangChain"],
-    Tools: ["Git", "Figma", "Postman", "Linux"],
+    Languages: ["Java", "Python", "JavaScript", "TypeScript", "Kotlin", "C", "C++", "SQL", "Bash", "R"],
+    Frontend: ["React", "React Native", "Tailwind CSS", "Vite", "HTML/CSS"],
+    Backend: ["Spring Boot", "FastAPI", "Flask", "REST APIs"],
+    "Cloud & DevOps": ["AWS (DynamoDB, S3, EC2, Lambda)", "Docker", "Kubernetes"],
+    "AI / ML": ["TensorFlow", "Keras", "LangChain", "Hugging Face", "FAISS", "Pandas", "NumPy"],
+    Tools: ["Git", "Android Studio", "Jira", "Agile", "Dynatrace", "Figma"],
   },
 };
