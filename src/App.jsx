@@ -1,8 +1,11 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, useRef } from 'react';
 import Lenis from 'lenis';
+import { Howl } from 'howler';
 import Splash from './components/Splash';
 import Navbar from './components/Navbar';
 import ParticleBackground from './components/ParticleBackground';
+import ClickSparkles from './components/ClickSparkles';
+import CrystalOracle from './components/CrystalOracle';
 import Hero from './components/sections/Hero';
 import About from './components/sections/About';
 import Experience from './components/sections/Experience';
@@ -14,6 +17,36 @@ import './styles/globals.css';
 
 function App() {
   const [showSplash, setShowSplash] = useState(true);
+  const [playing, setPlaying] = useState(false);
+  const musicRef = useRef(null);
+
+  useEffect(() => {
+    musicRef.current = new Howl({
+      src: ['/assets/bg-music.mp3'],
+      loop: true,
+      volume: 0.25,
+    });
+    return () => musicRef.current?.unload();
+  }, []);
+
+  const handleEnter = () => {
+    setShowSplash(false);
+    // Start music on Enter
+    if (musicRef.current && !playing) {
+      musicRef.current.play();
+      setPlaying(true);
+    }
+  };
+
+  const toggleMusic = () => {
+    if (!musicRef.current) return;
+    if (playing) {
+      musicRef.current.pause();
+    } else {
+      musicRef.current.play();
+    }
+    setPlaying((p) => !p);
+  };
 
   useEffect(() => {
     if (showSplash) return;
@@ -32,11 +65,12 @@ function App() {
 
   return (
     <>
-      <Splash onEnter={() => setShowSplash(false)} />
+      <Splash onEnter={handleEnter} />
+      <ClickSparkles />
 
       <div style={{ visibility: showSplash ? 'hidden' : 'visible' }}>
         <ParticleBackground />
-        <Navbar />
+        <Navbar playing={playing} toggleMusic={toggleMusic} />
         <main className="relative z-10">
           <Hero />
           <About />
@@ -46,6 +80,7 @@ function App() {
           <Contact />
         </main>
         <Footer />
+        <CrystalOracle />
       </div>
     </>
   );

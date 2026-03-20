@@ -6,6 +6,17 @@ export const CONTENT = {
       "Mobile Developer",
       "AI/ML Enthusiast",
       "Open Source Contributor",
+      "React Developer",
+      "Backend Engineer",
+      "Cloud & DevOps",
+      "Python Developer",
+      "Android Developer",
+      "API Designer",
+      "Boba-fueled Coder",
+      "Lifelong Learner",
+      "Problem Solver",
+      "Detail-Oriented",
+      "CS @ Purdue",
     ],
     tagline: "Building things that matter, one line at a time.",
     bio: "Full stack software engineer with a passion for building across the entire stack, from mobile apps to cloud infrastructure to AI-powered experiences. BS Computer Science, Purdue University. Based in San Jose, CA.",
@@ -19,7 +30,7 @@ export const CONTENT = {
   funFacts: [
     {
       emoji: "✈️",
-      text: "Dream city since childhood: London. Still haven't been — at this point I just want to go everywhere.",
+      text: "Dream city since childhood: London. Still haven't been — at this point I just want to explore everywhere!",
     },
     {
       emoji: "🍜",
@@ -27,15 +38,15 @@ export const CONTENT = {
     },
     {
       emoji: "🧋",
-      text: "Boba and chocolate chip cookies are non-negotiable life essentials.",
+      text: "Boba and chocolate chip cookies are non-negotiable life essentials!",
     },
     {
       emoji: "📺",
-      text: "Brooklyn Nine Nine is peak TV. Also deep in a never-ending kdrama watchlist.",
+      text: "Brooklyn Nine Nine is a forever favorite. Also deep in a never-ending kdrama watchlist.",
     },
     {
-      emoji: "🌸",
-      text: "Spring is the only correct season. Bonus points for cherry blossoms.",
+      emoji: "💜",
+      text: "Purple is my favorite color! (in case you couldn't tell)",
     },
     {
       emoji: "🎲",
@@ -52,9 +63,9 @@ export const CONTENT = {
   ],
 
   hotTakes: [
-    "Nutty flavors (peanuts, sesame) are overrated.",
-    "Mint chocolate chip is simply not it.",
-    "Ice in drinks is a scam.",
+    "Nutty flavors (peanuts, sesame) are overrated (no im not allergic).",
+    "Mint chocolate chip is just not it.",
+    "Ice in drinks is a scam (yes i have sensitive teeth).",
   ],
 
   experience: [
@@ -150,6 +161,6 @@ export const CONTENT = {
     Backend: ["Spring Boot", "FastAPI", "Flask", "REST APIs"],
     "Cloud & DevOps": ["AWS (DynamoDB, S3, EC2, Lambda)", "Docker", "Kubernetes"],
     "AI / ML": ["TensorFlow", "Keras", "LangChain", "Hugging Face", "FAISS", "Pandas", "NumPy"],
-    Tools: ["Git", "Android Studio", "Jira", "Agile", "Dynatrace", "Figma"],
+    Tools: ["Git", "Android Studio", "Jira", "Agile", "Dynatrace", "Figma", "Vercel"],
   },
 };

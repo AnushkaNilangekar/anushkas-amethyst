@@ -18,7 +18,7 @@ const Skills = () => {
         >
           <p
             className="text-xs tracking-[0.4em] uppercase mb-3"
-            style={{ color: 'rgba(245,158,11,0.55)' }}
+            style={{ color: 'rgba(245,158,11,0.75)' }}
           >
             Skills
           </p>

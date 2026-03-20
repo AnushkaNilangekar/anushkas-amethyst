@@ -21,7 +21,7 @@ const Projects = () => {
         >
           <p
             className="text-xs tracking-[0.4em] uppercase mb-3"
-            style={{ color: 'rgba(245,158,11,0.55)' }}
+            style={{ color: 'rgba(245,158,11,0.75)' }}
           >
             Work
           </p>
@@ -34,14 +34,19 @@ const Projects = () => {
         </motion.div>
 
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
-          {projects.map((project, i) => (
-            <motion.div
+          {projects.map((project, i) => {
+            const hasLink = project.github && project.github !== '#';
+            const CardWrapper = hasLink ? motion.a : motion.div;
+            return (
+            <CardWrapper
               key={i}
+              {...(hasLink ? { href: project.github, target: '_blank', rel: 'noopener noreferrer' } : {})}
               initial={{ opacity: 0, y: 28 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.55, delay: i * 0.1 }}
-              className="glass rounded-2xl overflow-hidden group hover-glow transition-all duration-300"
+              className={`glass rounded-2xl overflow-hidden group hover-glow transition-all duration-300${hasLink ? ' cursor-pointer' : ''}`}
+              style={{ textDecoration: 'none' }}
               whileHover={{ y: -6 }}
             >
               {/* Preview image */}
@@ -130,8 +135,9 @@ const Projects = () => {
                   ))}
                 </div>
               </div>
-            </motion.div>
-          ))}
+            </CardWrapper>
+            );
+          })}
         </div>
       </div>
     </section>

@@ -6,7 +6,7 @@ const SPARKLES = Array.from({ length: 24 }, (_, i) => ({
   x: Math.random() * 100,
   y: Math.random() * 100,
   delay: Math.random() * 3,
-  size: Math.random() * 2.5 + 1,
+  size: 1 + Math.random() * 2.5,
   color: i % 3 === 0 ? '#f59e0b' : i % 3 === 1 ? '#c084fc' : '#ffffff',
 }));
 
@@ -68,11 +68,12 @@ const Splash = ({ onEnter }) => {
               className="font-display font-bold leading-none mb-2"
               style={{
                 fontSize: 'clamp(2.8rem, 8vw, 5.5rem)',
-                background: 'linear-gradient(135deg, #ddd6fe 0%, #f59e0b 55%, #ddd6fe 100%)',
+                background: 'linear-gradient(135deg, #ddd6fe 0%, #f59e0b 60%, #ddd6fe 100%)',
                 WebkitBackgroundClip: 'text',
                 WebkitTextFillColor: 'transparent',
                 backgroundClip: 'text',
                 filter: 'drop-shadow(0 0 30px rgba(245,158,11,0.2))',
+                paddingBottom: '0.1em',
               }}
               initial={{ opacity: 0, y: 16 }}
               animate={{ opacity: 1, y: 0 }}

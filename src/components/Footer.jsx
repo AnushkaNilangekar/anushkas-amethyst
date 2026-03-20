@@ -12,7 +12,7 @@ const Footer = () => {
           © {new Date().getFullYear()} {personal.name}
         </span>
         <span
-          className="text-xs tracking-[0.2em] uppercase"
+          className="text-xs tracking-[0.2em] lowercase"
           style={{ color: 'rgba(245,158,11,0.25)' }}
         >
           crafted with love from my amethyst cave :)
