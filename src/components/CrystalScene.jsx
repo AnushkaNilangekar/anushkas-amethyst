@@ -12,7 +12,7 @@ const BACK = [
 ];
 
 const FRONT = [
-  [60,  375, 35],
+  [60, 375, 35],
   [250, 268, 52],
   [460, 195, 62],
   [660, 148, 72],
@@ -22,11 +22,9 @@ const FRONT = [
   [1420, 345, 33],
 ];
 
-const pts = (cx, ty, hw) =>
-  `${cx},${ty} ${cx + hw},500 ${cx - hw},500`;
+const pts = (cx, ty, hw) => `${cx},${ty} ${cx + hw},500 ${cx - hw},500`;
 
-const highlightPts = (cx, ty, hw) =>
-  `${cx},${ty} ${cx + hw},500 ${cx + hw * 0.15},500`;
+const highlightPts = (cx, ty, hw) => `${cx},${ty} ${cx + hw},500 ${cx + hw * 0.15},500`;
 
 const CrystalScene = ({ className = '', style = {} }) => (
   <svg
@@ -75,10 +73,7 @@ const CrystalScene = ({ className = '', style = {} }) => (
     {FRONT.map(([cx, ty, hw], i) => (
       <g key={`f${i}`} filter={i >= 2 && i <= 5 ? 'url(#crystalGlow)' : undefined}>
         {/* Main body */}
-        <polygon
-          points={pts(cx, ty, hw)}
-          fill={`rgba(124,58,237,${0.52 + (i % 2) * 0.1})`}
-        />
+        <polygon points={pts(cx, ty, hw)} fill={`rgba(124,58,237,${0.52 + (i % 2) * 0.1})`} />
         {/* Right-face highlight */}
         <polygon
           points={highlightPts(cx, ty, hw)}

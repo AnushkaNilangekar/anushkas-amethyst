@@ -20,7 +20,8 @@ const Footer = () => {
       </div>
       <div className="max-w-6xl mx-auto px-6 mt-3 flex justify-center">
         <span className="text-xs" style={{ color: 'rgba(192,132,252,0.2)' }}>
-          ♪ background music: "wizard's apprentice" by michael ghelfi &amp; filip melvan · magical music collection, vol. 1 · ℗ michael ghelfi studios
+          ♪ background music: &quot;wizard&apos;s apprentice&quot; by michael ghelfi &amp; filip
+          melvan · magical music collection, vol. 1 · ℗ michael ghelfi studios
         </span>
       </div>
     </footer>

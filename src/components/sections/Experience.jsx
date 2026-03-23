@@ -3,7 +3,7 @@ import { motion } from 'framer-motion';
 import { CONTENT } from '../../data/content';
 
 const COMPANY_LOGOS = {
-  'PolicyEngine': '/assets/logos/policyengine.jpg',
+  PolicyEngine: '/assets/logos/policyengine.jpg',
   'Indiana Farm Bureau Insurance': '/assets/logos/ifbi.jpg',
   'Sports.Excitement LLC': '/assets/logos/sports-excitement.jpg',
   'Nuvve Corp — The Data Mine, Purdue University': '/assets/logos/nuvve.jpg',
@@ -22,20 +22,26 @@ const Experience = () => {
     <section id="experience" className="relative">
       <div className="divider" />
       <div className="section">
-          <motion.div
-            initial={{ opacity: 0, y: 24 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.7 }}
-            className="mb-14"
+        <motion.div
+          initial={{ opacity: 0, y: 24 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.7 }}
+          className="mb-14"
+        >
+          <p
+            className="text-xs tracking-[0.4em] uppercase mb-3"
+            style={{ color: 'rgba(245,158,11,0.75)' }}
           >
-            <p className="text-xs tracking-[0.4em] uppercase mb-3" style={{ color: 'rgba(245,158,11,0.75)' }}>
-              Experience
-            </p>
-            <h2 className="font-display font-bold text-gradient" style={{ fontSize: 'clamp(2rem, 5vw, 3.2rem)' }}>
-              Where I've worked
-            </h2>
-          </motion.div>
+            Experience
+          </p>
+          <h2
+            className="font-display font-bold text-gradient"
+            style={{ fontSize: 'clamp(2rem, 5vw, 3.2rem)' }}
+          >
+            Where I&apos;ve worked
+          </h2>
+        </motion.div>
 
         <div className="relative">
           <div
@@ -43,7 +49,8 @@ const Experience = () => {
             style={{
               left: '0.5rem',
               width: '1px',
-              background: 'linear-gradient(180deg, rgba(192,132,252,0.3) 0%, rgba(245,158,11,0.12) 100%)',
+              background:
+                'linear-gradient(180deg, rgba(192,132,252,0.3) 0%, rgba(245,158,11,0.12) 100%)',
             }}
           />
 
@@ -74,14 +81,20 @@ const Experience = () => {
                     <CompanyLogo company={exp.company} />
                     <div className="flex-1 flex flex-wrap items-start justify-between gap-2">
                       <div>
-                        <h3 className="font-display text-lg font-semibold" style={{ color: '#ddd6fe' }}>
+                        <h3
+                          className="font-display text-lg font-semibold"
+                          style={{ color: '#ddd6fe' }}
+                        >
                           {exp.role}
                         </h3>
                         <p className="text-sm mt-0.5" style={{ color: 'rgba(245,158,11,0.65)' }}>
                           {exp.company}
                         </p>
                       </div>
-                      <span className="text-xs tracking-wide" style={{ color: 'rgba(221,214,254,0.28)' }}>
+                      <span
+                        className="text-xs tracking-wide"
+                        style={{ color: 'rgba(221,214,254,0.28)' }}
+                      >
                         {exp.period}
                       </span>
                     </div>
@@ -89,8 +102,14 @@ const Experience = () => {
 
                   <ul className="space-y-2">
                     {exp.bullets.map((bullet, j) => (
-                      <li key={j} className="flex gap-3 text-sm leading-relaxed" style={{ color: 'rgba(221,214,254,0.5)' }}>
-                        <span className="shrink-0 mt-1" style={{ color: 'rgba(245,158,11,0.4)' }}>▸</span>
+                      <li
+                        key={j}
+                        className="flex gap-3 text-sm leading-relaxed"
+                        style={{ color: 'rgba(221,214,254,0.5)' }}
+                      >
+                        <span className="shrink-0 mt-1" style={{ color: 'rgba(245,158,11,0.4)' }}>
+                          ▸
+                        </span>
                         {bullet}
                       </li>
                     ))}

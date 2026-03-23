@@ -79,7 +79,7 @@ const Splash = ({ onEnter }) => {
               animate={{ opacity: 1, y: 0 }}
               transition={{ delay: 0.8, duration: 0.9 }}
             >
-              Anushka's Amethyst
+              Anushka&apos;s Amethyst
             </motion.h1>
 
             <motion.div
