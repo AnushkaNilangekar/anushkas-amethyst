@@ -149,7 +149,37 @@ const Hero = () => {
             </motion.div>
           </div>
 
-          {/* Right: floating tags */}
+          {/* Mobile: tag pills */}
+          <motion.div
+            className="flex md:hidden flex-wrap gap-2 mt-2 pb-20"
+            initial={{ opacity: 0, y: 10 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ delay: 1.5, duration: 0.6 }}
+          >
+            {personal.titles.map((title, i) => (
+              <motion.span
+                key={title}
+                className="tag-float glass rounded-full px-3 py-1.5 text-xs whitespace-nowrap"
+                style={{
+                  border: '1px solid rgba(192,132,252,0.18)',
+                  color: 'rgba(221,214,254,0.6)',
+                  animationDuration: `${4.5 + (i % 5) * 0.6}s`,
+                  animationDelay: `${(i % 7) * 0.4}s`,
+                }}
+                animate={{ opacity: [0, 1, 1, 0.15, 1, 1, 0] }}
+                transition={{
+                  duration: 8 + i * 0.6,
+                  repeat: Infinity,
+                  ease: 'easeInOut',
+                  delay: i * 0.5,
+                }}
+              >
+                {title}
+              </motion.span>
+            ))}
+          </motion.div>
+
+          {/* Desktop: floating tags */}
           <motion.div
             className="hidden md:block relative"
             style={{ height: '420px' }}
