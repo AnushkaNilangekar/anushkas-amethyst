@@ -47,10 +47,16 @@ const About = () => {
             className="space-y-5"
           >
             <div>
-              <p className="text-xs tracking-[0.4em] uppercase mb-3" style={{ color: 'rgba(245,158,11,0.55)' }}>
+              <p
+                className="text-xs tracking-[0.4em] uppercase mb-3"
+                style={{ color: 'rgba(245,158,11,0.55)' }}
+              >
                 About
               </p>
-              <h2 className="font-display font-bold text-gradient mb-5" style={{ fontSize: 'clamp(2rem, 5vw, 3.2rem)' }}>
+              <h2
+                className="font-display font-bold text-gradient mb-5"
+                style={{ fontSize: 'clamp(2rem, 5vw, 3.2rem)' }}
+              >
                 Who I am
               </h2>
             </div>
@@ -58,7 +64,8 @@ const About = () => {
               {personal.bio}
             </p>
             <p className="leading-relaxed text-sm" style={{ color: 'rgba(221,214,254,0.45)' }}>
-              I love building across the stack: mobile apps, cloud infrastructure, AI pipelines, you name it. If there's a problem worth solving, I want to figure out how :)
+              I love building across the stack: mobile apps, cloud infrastructure, AI pipelines, you
+              name it. If there&apos;s a problem worth solving, I want to figure out how :)
             </p>
           </motion.div>
 
@@ -72,7 +79,9 @@ const About = () => {
           >
             <div
               className="mx-auto rounded-2xl overflow-hidden glass"
-              style={{ boxShadow: '0 0 50px rgba(124,58,237,0.12), 0 0 100px rgba(245,158,11,0.04)' }}
+              style={{
+                boxShadow: '0 0 50px rgba(124,58,237,0.12), 0 0 100px rgba(245,158,11,0.04)',
+              }}
             >
               <img
                 src="/assets/Grad.jpg"

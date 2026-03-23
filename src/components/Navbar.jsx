@@ -3,17 +3,17 @@ import { Link } from 'react-scroll';
 import { motion, AnimatePresence } from 'framer-motion';
 
 const NAV_ITEMS = [
-  { id: 'hero',       label: 'Home'       },
-  { id: 'about',      label: 'About'      },
+  { id: 'hero', label: 'Home' },
+  { id: 'about', label: 'About' },
   { id: 'experience', label: 'Experience' },
-  { id: 'projects',   label: 'Projects'   },
-  { id: 'skills',     label: 'Skills'     },
-  { id: 'contact',    label: 'Contact'    },
+  { id: 'projects', label: 'Projects' },
+  { id: 'skills', label: 'Skills' },
+  { id: 'contact', label: 'Contact' },
 ];
 
 const Navbar = ({ playing, toggleMusic }) => {
-  const [scrolled, setScrolled]   = useState(false);
-  const [menuOpen, setMenuOpen]   = useState(false);
+  const [scrolled, setScrolled] = useState(false);
+  const [menuOpen, setMenuOpen] = useState(false);
 
   useEffect(() => {
     const onScroll = () => setScrolled(window.scrollY > 24);
@@ -33,7 +33,10 @@ const Navbar = ({ playing, toggleMusic }) => {
       <div className="max-w-6xl mx-auto px-6 py-4 flex items-center justify-between">
         {/* Logo */}
         <Link to="hero" smooth duration={600} className="cursor-pointer">
-          <span className="font-display text-xl font-bold text-gradient select-none" style={{ letterSpacing: '0.05em' }}>
+          <span
+            className="font-display text-xl font-bold text-gradient select-none"
+            style={{ letterSpacing: '0.05em' }}
+          >
             AN
           </span>
         </Link>
@@ -44,7 +47,10 @@ const Navbar = ({ playing, toggleMusic }) => {
             <li key={item.id}>
               <Link
                 to={item.id}
-                spy smooth duration={600} offset={-70}
+                spy
+                smooth
+                duration={600}
+                offset={-70}
                 className="text-xs tracking-widest uppercase transition-colors duration-200 cursor-pointer"
                 style={{ color: 'rgba(221,214,254,0.45)' }}
                 activeClass="!text-gold-light"
@@ -83,9 +89,18 @@ const Navbar = ({ playing, toggleMusic }) => {
             aria-label="Toggle menu"
             style={{ background: 'transparent', border: 'none', padding: 0 }}
           >
-            <motion.span className="block w-5 h-px bg-amethyst-pale/60" animate={{ rotate: menuOpen ? 45 : 0, y: menuOpen ? 6 : 0 }} />
-            <motion.span className="block w-5 h-px bg-amethyst-pale/60" animate={{ opacity: menuOpen ? 0 : 1 }} />
-            <motion.span className="block w-5 h-px bg-amethyst-pale/60" animate={{ rotate: menuOpen ? -45 : 0, y: menuOpen ? -6 : 0 }} />
+            <motion.span
+              className="block w-5 h-px bg-amethyst-pale/60"
+              animate={{ rotate: menuOpen ? 45 : 0, y: menuOpen ? 6 : 0 }}
+            />
+            <motion.span
+              className="block w-5 h-px bg-amethyst-pale/60"
+              animate={{ opacity: menuOpen ? 0 : 1 }}
+            />
+            <motion.span
+              className="block w-5 h-px bg-amethyst-pale/60"
+              animate={{ rotate: menuOpen ? -45 : 0, y: menuOpen ? -6 : 0 }}
+            />
           </button>
         </div>
       </div>
@@ -104,7 +119,10 @@ const Navbar = ({ playing, toggleMusic }) => {
               <Link
                 key={item.id}
                 to={item.id}
-                spy smooth duration={600} offset={-70}
+                spy
+                smooth
+                duration={600}
+                offset={-70}
                 onClick={() => setMenuOpen(false)}
                 className="text-xs tracking-widest uppercase cursor-pointer transition-colors duration-200"
                 style={{ color: 'rgba(221,214,254,0.45)' }}

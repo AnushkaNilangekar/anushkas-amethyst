@@ -5,21 +5,21 @@ import { CONTENT } from '../../data/content';
 
 // Floating role tags
 const FLOAT_OFFSETS = [
-  { x: 0,  y: 3,  delay: 0,   dur: 5   },  // Full Stack Engineer
-  { x: 62, y: 2,  delay: 0.8, dur: 6.5 },  // Mobile Developer
-  { x: 24, y: 18, delay: 1.5, dur: 4.5 },  // AI/ML Enthusiast
-  { x: 0,  y: 36, delay: 0.3, dur: 7   },  // Open Source Contributor
-  { x: 4,  y: 54, delay: 1.1, dur: 5.5 },  // React Developer
-  { x: 58, y: 48, delay: 0.5, dur: 6   },  // Backend Engineer
-  { x: 80, y: 14, delay: 1.8, dur: 5   },  // Cloud & DevOps
-  { x: 18, y: 70, delay: 0.9, dur: 7.5 },  // Python Developer
-  { x: 72, y: 63, delay: 1.3, dur: 4.8 },  // Android Developer
-  { x: 65, y: 82, delay: 0.2, dur: 6.2 },  // API Designer
-  { x: 0,  y: 82, delay: 1.6, dur: 5.3 },  // Boba-fueled Coder
-  { x: 78, y: 40, delay: 0.7, dur: 6.8 },  // Lifelong Learner
-  { x: 42, y: 30, delay: 1.2, dur: 5.8 },  // Problem Solver
-  { x: 48, y: 68, delay: 0.4, dur: 4.3 },  // Detail-Oriented
-  { x: 66, y: 22, delay: 1.9, dur: 7.2 },  // CS @ Purdue
+  { x: 0, y: 3, delay: 0, dur: 5 }, // Full Stack Engineer
+  { x: 62, y: 2, delay: 0.8, dur: 6.5 }, // Mobile Developer
+  { x: 24, y: 18, delay: 1.5, dur: 4.5 }, // AI/ML Enthusiast
+  { x: 0, y: 36, delay: 0.3, dur: 7 }, // Open Source Contributor
+  { x: 4, y: 54, delay: 1.1, dur: 5.5 }, // React Developer
+  { x: 58, y: 48, delay: 0.5, dur: 6 }, // Backend Engineer
+  { x: 80, y: 14, delay: 1.8, dur: 5 }, // Cloud & DevOps
+  { x: 18, y: 70, delay: 0.9, dur: 7.5 }, // Python Developer
+  { x: 72, y: 63, delay: 1.3, dur: 4.8 }, // Android Developer
+  { x: 65, y: 82, delay: 0.2, dur: 6.2 }, // API Designer
+  { x: 0, y: 82, delay: 1.6, dur: 5.3 }, // Boba-fueled Coder
+  { x: 78, y: 40, delay: 0.7, dur: 6.8 }, // Lifelong Learner
+  { x: 42, y: 30, delay: 1.2, dur: 5.8 }, // Problem Solver
+  { x: 48, y: 68, delay: 0.4, dur: 4.3 }, // Detail-Oriented
+  { x: 66, y: 22, delay: 1.9, dur: 7.2 }, // CS @ Purdue
 ];
 
 const FloatingTags = ({ titles }) => (
@@ -33,7 +33,12 @@ const FloatingTags = ({ titles }) => (
           className="absolute"
           style={{ left: `${off.x}%`, top: `${off.y}%` }}
           animate={{ opacity: [0, 1, 1, 0.15, 1, 1, 0] }}
-          transition={{ duration: 8 + i * 0.6, repeat: Infinity, ease: 'easeInOut', delay: i * 0.5 }}
+          transition={{
+            duration: 8 + i * 0.6,
+            repeat: Infinity,
+            ease: 'easeInOut',
+            delay: i * 0.5,
+          }}
         >
           {/* CSS animation: bob up and down */}
           <div
@@ -50,7 +55,10 @@ const FloatingTags = ({ titles }) => (
                 scale: 1.05,
               }}
             >
-              <span className="text-xs tracking-wide whitespace-nowrap" style={{ color: 'rgba(221,214,254,0.6)' }}>
+              <span
+                className="text-xs tracking-wide whitespace-nowrap"
+                style={{ color: 'rgba(221,214,254,0.6)' }}
+              >
                 {title}
               </span>
             </motion.div>
@@ -112,21 +120,28 @@ const Hero = () => {
                 rel="noopener noreferrer"
                 className="px-7 py-2.5 rounded-full text-xs tracking-widest uppercase font-medium transition-all duration-300"
                 style={{
-                  background: 'linear-gradient(135deg, rgba(124,58,237,0.35), rgba(245,158,11,0.25))',
+                  background:
+                    'linear-gradient(135deg, rgba(124,58,237,0.35), rgba(245,158,11,0.25))',
                   border: '1px solid rgba(245,158,11,0.3)',
                   color: '#fde68a',
                 }}
-                onMouseEnter={(e) => (e.currentTarget.style.boxShadow = '0 0 28px rgba(245,158,11,0.2)')}
+                onMouseEnter={(e) =>
+                  (e.currentTarget.style.boxShadow = '0 0 28px rgba(245,158,11,0.2)')
+                }
                 onMouseLeave={(e) => (e.currentTarget.style.boxShadow = 'none')}
               >
                 Resume
               </a>
               <Link
                 to="contact"
-                smooth duration={700} offset={-70}
+                smooth
+                duration={700}
+                offset={-70}
                 className="px-7 py-2.5 rounded-full text-xs tracking-widest uppercase font-medium cursor-pointer transition-all duration-300"
                 style={{ border: '1px solid rgba(192,132,252,0.25)', color: '#c084fc' }}
-                onMouseEnter={(e) => (e.currentTarget.style.boxShadow = '0 0 22px rgba(168,85,247,0.15)')}
+                onMouseEnter={(e) =>
+                  (e.currentTarget.style.boxShadow = '0 0 22px rgba(168,85,247,0.15)')
+                }
                 onMouseLeave={(e) => (e.currentTarget.style.boxShadow = 'none')}
               >
                 Get in touch
@@ -134,16 +149,46 @@ const Hero = () => {
             </motion.div>
           </div>
 
-          {/* Right: floating tags */}
+          {/* Mobile: tag pills */}
           <motion.div
-              className="hidden md:block relative"
-              style={{ height: '420px' }}
-              initial={{ opacity: 0 }}
-              animate={{ opacity: 1 }}
-              transition={{ delay: 1.0 }}
-            >
-              <FloatingTags titles={personal.titles} />
-            </motion.div>
+            className="flex md:hidden flex-wrap gap-2 mt-2 pb-20"
+            initial={{ opacity: 0, y: 10 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ delay: 1.5, duration: 0.6 }}
+          >
+            {personal.titles.map((title, i) => (
+              <motion.span
+                key={title}
+                className="tag-float glass rounded-full px-3 py-1.5 text-xs whitespace-nowrap"
+                style={{
+                  border: '1px solid rgba(192,132,252,0.18)',
+                  color: 'rgba(221,214,254,0.6)',
+                  animationDuration: `${4.5 + (i % 5) * 0.6}s`,
+                  animationDelay: `${(i % 7) * 0.4}s`,
+                }}
+                animate={{ opacity: [0, 1, 1, 0.15, 1, 1, 0] }}
+                transition={{
+                  duration: 8 + i * 0.6,
+                  repeat: Infinity,
+                  ease: 'easeInOut',
+                  delay: i * 0.5,
+                }}
+              >
+                {title}
+              </motion.span>
+            ))}
+          </motion.div>
+
+          {/* Desktop: floating tags */}
+          <motion.div
+            className="hidden md:block relative"
+            style={{ height: '420px' }}
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            transition={{ delay: 1.0 }}
+          >
+            <FloatingTags titles={personal.titles} />
+          </motion.div>
         </div>
       </div>
 
@@ -158,7 +203,9 @@ const Hero = () => {
         <span className="text-[10px] tracking-[0.35em] uppercase">Scroll</span>
         <motion.div
           className="w-px h-10"
-          style={{ background: 'linear-gradient(180deg, rgba(192,132,252,0.35) 0%, transparent 100%)' }}
+          style={{
+            background: 'linear-gradient(180deg, rgba(192,132,252,0.35) 0%, transparent 100%)',
+          }}
           animate={{ scaleY: [1, 0.4, 1], opacity: [0.6, 0.2, 0.6] }}
           transition={{ duration: 2, repeat: Infinity, ease: 'easeInOut' }}
         />

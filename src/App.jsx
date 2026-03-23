@@ -1,4 +1,5 @@
 import React, { useState, useEffect, useRef } from 'react';
+import { Analytics } from '@vercel/analytics/react';
 import Lenis from 'lenis';
 import { Howl } from 'howler';
 import Splash from './components/Splash';
@@ -86,6 +87,7 @@ function App() {
         <Footer />
         <CrystalOracle />
       </div>
+      <Analytics />
     </>
   );
 }

@@ -14,7 +14,7 @@ body {
   background-image:
     radial-gradient(ellipse at 50% 0%, #22103a 0%, transparent 65%),
     radial-gradient(ellipse at 50% 100%, #1e0f30 0%, transparent 60%),
-    radial-gradient(ellipse at 80% 70%, rgba(120,60,10,0.08) 0%, transparent 50%);
+    radial-gradient(ellipse at 80% 70%, rgba(120, 60, 10, 0.08) 0%, transparent 50%);
   color: #f3e8ff;
   font-family: 'Inter', system-ui, sans-serif;
   overflow-x: hidden;
@@ -55,7 +55,9 @@ body {
   transition: box-shadow 0.3s ease;
 }
 .hover-glow:hover {
-  box-shadow: 0 0 24px rgba(245, 158, 11, 0.15), 0 0 48px rgba(168, 85, 247, 0.08);
+  box-shadow:
+    0 0 24px rgba(245, 158, 11, 0.15),
+    0 0 48px rgba(168, 85, 247, 0.08);
 }
 
 /* ── Section inner container ── */
@@ -118,8 +120,13 @@ body {
 
 /* ── Floating tag bob animation ── */
 @keyframes tagFloat {
-  0%, 100% { transform: translateY(0px); }
-  50%       { transform: translateY(-8px); }
+  0%,
+  100% {
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(-8px);
+  }
 }
 .tag-float {
   animation-name: tagFloat;
