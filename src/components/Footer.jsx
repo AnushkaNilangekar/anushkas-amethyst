@@ -12,10 +12,15 @@ const Footer = () => {
           © {new Date().getFullYear()} {personal.name}
         </span>
         <span
-          className="text-xs tracking-[0.2em] uppercase"
+          className="text-xs tracking-[0.2em] lowercase"
           style={{ color: 'rgba(245,158,11,0.25)' }}
         >
           crafted with love from my amethyst cave :)
+        </span>
+      </div>
+      <div className="max-w-6xl mx-auto px-6 mt-3 flex justify-center">
+        <span className="text-xs" style={{ color: 'rgba(192,132,252,0.2)' }}>
+          ♪ background music: "wizard's apprentice" by michael ghelfi &amp; filip melvan · magical music collection, vol. 1 · ℗ michael ghelfi studios
         </span>
       </div>
     </footer>
