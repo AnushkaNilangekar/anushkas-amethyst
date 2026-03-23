@@ -46,7 +46,7 @@ export const CONTENT = {
     },
     {
       emoji: "💜",
-      text: "Purple is my favorite color! (in case you couldn't tell)",
+      text: "Purple is my favorite color!",
     },
     {
       emoji: "🎲",
@@ -63,9 +63,9 @@ export const CONTENT = {
   ],
 
   hotTakes: [
-    "Nutty flavors (peanuts, sesame) are overrated (no im not allergic).",
+    "Nutty flavors (peanuts, sesame) are overrated.",
     "Mint chocolate chip is just not it.",
-    "Ice in drinks is a scam (yes i have sensitive teeth).",
+    "Ice in drinks is a scam.",
   ],
 
   experience: [

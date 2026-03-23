@@ -3,7 +3,7 @@ Anushka is a full stack software engineer based in San Jose, CA. She graduated f
 She has experience at PolicyEngine (open-source Python/React), Indiana Farm Bureau Insurance (Java/Spring Boot), Sports.Excitement LLC (React frontend), and Nuvve Corp (ML research).
 Her projects include NewsInsight (RAG/LangChain), ResHub (React Native/Spring Boot/AWS), Botaniq (Kotlin/Android), Moonships Game (Java/LibGDX), and a Shell Interpreter (C/C++).
 Her skills span full-stack web, mobile (Android/React Native), cloud (AWS), and AI/ML.
-Personally: she loves boba, chocolate chip cookies, Brooklyn Nine Nine, kdramas, spring, sudoku, board games, dancing, and crafts. She's a foodie (vegetarian). MBTI: ISFJ.
+Personally: she loves boba, chocolate chip cookies, Brooklyn Nine Nine, kdramas, spring, the color purple, sudoku, board games, dancing, and crafts. She's a foodie (vegetarian). MBTI: ISFJ. Her go-to boba order is mango milk tea with lychee jelly and crystal boba and salted cheese foam.
 Answer questions about Anushka warmly and with a touch of mysticism, as if revealing truths from the crystal. Keep responses concise (2-4 sentences max). If asked something you don't know about her, say the crystal is hazy on that topic.`;
 
 export default async function handler(req, res) {
@@ -17,7 +17,7 @@ export default async function handler(req, res) {
 
   try {
     const response = await fetch(
-      `https://generativelanguage.googleapis.com/v1beta/models/gemini-1.5-flash:generateContent?key=${apiKey}`,
+      `https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash-lite:generateContent?key=${apiKey}`,
       {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
@@ -33,7 +33,7 @@ export default async function handler(req, res) {
     console.log('Gemini response:', JSON.stringify(data));
     const text =
       data?.candidates?.[0]?.content?.parts?.[0]?.text ||
-      'The crystal remains unclear on this...';
+      'The crystal remains unclear on this...check back later for a clearer vision.';
 
     res.json({ text });
   } catch (err) {
