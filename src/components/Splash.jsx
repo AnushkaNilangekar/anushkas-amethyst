@@ -1,7 +1,8 @@
-import React, { useState } from 'react';
+import { useState } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
+import SplashCrystals from './SplashCrystals';
 
-const SPARKLES = Array.from({ length: 24 }, (_, i) => ({
+const SPARKLES = Array.from({ length: 120 }, (_, i) => ({
   id: i,
   x: Math.random() * 100,
   y: Math.random() * 100,
@@ -29,6 +30,9 @@ const Splash = ({ onEnter }) => {
           exit={{ opacity: 0 }}
           transition={{ duration: 0.9, ease: 'easeInOut' }}
         >
+          {/* Crystal cave frame */}
+          <SplashCrystals />
+
           {/* Ambient sparkles */}
           {SPARKLES.map((s) => (
             <motion.div
