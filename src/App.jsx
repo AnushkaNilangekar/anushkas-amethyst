@@ -14,6 +14,7 @@ import Projects from './components/sections/Projects';
 import Skills from './components/sections/Skills';
 import Contact from './components/sections/Contact';
 import Footer from './components/Footer';
+import SocialSidebar from './components/SocialSidebar';
 import './styles/globals.css';
 
 function App() {
@@ -86,6 +87,7 @@ function App() {
         </main>
         <Footer />
         <CrystalOracle />
+        <SocialSidebar />
       </div>
       <Analytics />
     </>
