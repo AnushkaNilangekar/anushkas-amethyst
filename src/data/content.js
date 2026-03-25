@@ -19,7 +19,7 @@ export const CONTENT = {
       'Purdue CS Grad',
     ],
     tagline: 'Building things that matter, one line at a time.',
-    bio: 'Full-stack software engineer with experience building end-to-end systems, from mobile applications to cloud infrastructure to AI-driven features. I graduated with a BS in Computer Science from Purdue University and am currently based in San Jose, California. I have a passion for crafting elegant solutions to complex problems and am always eager to learn new technologies and take on new challenges.',
+    bio: 'Full-stack software engineer with experience building end-to-end systems, from mobile applications to cloud infrastructure to AI-driven features. I graduated with a BS in Computer Science from Purdue University and am currently based in San Jose, California.',
     location: 'San Jose, CA',
     email: 'anushka.nilangekar1@gmail.com',
     github: 'https://github.com/AnushkaNilangekar',
