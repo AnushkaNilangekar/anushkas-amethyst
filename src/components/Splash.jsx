@@ -61,7 +61,7 @@ const Splash = ({ onEnter }) => {
               animate={{ opacity: 1, y: 0 }}
               transition={{ delay: 0.4, duration: 0.8 }}
             >
-              Welcome to
+              Welcome to the Data Mine of
             </motion.p>
 
             <motion.h1
@@ -79,7 +79,7 @@ const Splash = ({ onEnter }) => {
               animate={{ opacity: 1, y: 0 }}
               transition={{ delay: 0.8, duration: 0.9 }}
             >
-              Anushka&apos;s Amethyst
+              Anushka Nilangekar
             </motion.h1>
 
             <motion.div
@@ -107,7 +107,7 @@ const Splash = ({ onEnter }) => {
               }}
               whileTap={{ scale: 0.97 }}
             >
-              Enter
+              Initialize Extraction
             </motion.button>
           </div>
         </motion.div>

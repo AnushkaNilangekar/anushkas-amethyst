@@ -16,10 +16,10 @@ export const CONTENT = {
       'Lifelong Learner',
       'Problem Solver',
       'Detail-Oriented',
-      'CS @ Purdue',
+      'Purdue CS Grad',
     ],
     tagline: 'Building things that matter, one line at a time.',
-    bio: 'Full stack software engineer with a passion for building across the entire stack, from mobile apps to cloud infrastructure to AI-powered experiences. BS Computer Science, Purdue University. Based in San Jose, CA.',
+    bio: 'Full-stack software engineer with experience building end-to-end systems, from mobile applications to cloud infrastructure to AI-driven features. I graduated with a BS in Computer Science from Purdue University and am currently based in San Jose, California. I have a passion for crafting elegant solutions to complex problems and am always eager to learn new technologies and take on new challenges.',
     location: 'San Jose, CA',
     email: 'anushka.nilangekar1@gmail.com',
     github: 'https://github.com/AnushkaNilangekar',
@@ -30,15 +30,15 @@ export const CONTENT = {
   funFacts: [
     {
       emoji: '✈️',
-      text: "Dream city since childhood: London. Still haven't been — at this point I just want to explore everywhere!",
+      text: "Dream city since childhood: London. Still haven't been but at this point I want to explore everywhere!",
     },
     {
       emoji: '🍜',
-      text: 'Certified foodie (vegetarian edition). Will try any cuisine at least once.',
+      text: 'Certified foodie (vegetarian edition). Always on the hunt for the best local eats and new recipes to try at home.',
     },
     {
       emoji: '🧋',
-      text: 'Boba and chocolate chip cookies are non-negotiable life essentials!',
+      text: 'Sweet tooth cravings: boba, chocolate chip cookies, and mochi donuts!',
     },
     {
       emoji: '📺',

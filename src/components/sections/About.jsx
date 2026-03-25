@@ -64,8 +64,7 @@ const About = () => {
               {personal.bio}
             </p>
             <p className="leading-relaxed text-sm" style={{ color: 'rgba(221,214,254,0.45)' }}>
-              I love building across the stack: mobile apps, cloud infrastructure, AI pipelines, you
-              name it. If there&apos;s a problem worth solving, I want to figure out how :)
+              I enjoy working across the stack, but I&apos;m especially interested in platform and backend systems where the impact scales beyond a single feature or interface. I like building the infrastructure, pipelines, and services that enable products to run reliably and grow.
             </p>
           </motion.div>
 
