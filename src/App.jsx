@@ -19,6 +19,10 @@ import './styles/globals.css';
 
 function App() {
   const [showSplash, setShowSplash] = useState(true);
+
+  useEffect(() => {
+    history.scrollRestoration = 'manual';
+  }, []);
   const [playing, setPlaying] = useState(false);
   const musicRef = useRef(null);
 
@@ -32,6 +36,7 @@ function App() {
   }, []);
 
   const handleEnter = () => {
+    window.scrollTo(0, 0);
     setShowSplash(false);
     // Start music on Enter
     if (musicRef.current && !playing) {

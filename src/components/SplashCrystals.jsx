@@ -145,7 +145,7 @@ const CRYSTALS = (() => {
     const cx    = Math.round(155 + i * 111 + (sr(i * 9 + 101) - 0.5) * 44);
     const h     = Math.round(220 + sr(i * 9 + 102) * 150);
     const w     = Math.round(h * (0.30 + sr(i * 9 + 103) * 0.26));
-    const cy    = Math.round(698 + sr(i * 9 + 104) * 36);
+    const cy    = Math.round(724 + sr(i * 9 + 104) * 36);
     const angle = Math.round(((sr(i * 9 + 105) - 0.5) * 46) * 10) / 10;
     const tipR  = Math.round((0.17 + sr(i * 9 + 106) * 0.17) * 100) / 100;
     back.push({ cx, cy, w, h, angle, tipR });
@@ -245,7 +245,7 @@ const CRYSTALS = (() => {
 export default function SplashCrystals() {
   return (
     <motion.svg
-      className="absolute inset-0 w-full h-full"
+      className="hidden md:block absolute inset-0 w-full h-full"
       viewBox="0 0 1440 900"
       preserveAspectRatio="xMidYMid slice"
       style={{ pointerEvents: 'none' }}
